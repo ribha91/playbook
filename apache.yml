@@ -1,0 +1,17 @@
+- name: this is apache installation
+  hosts: all
+  tasks: 
+   - name: install httpd
+     yum: 
+       name: httpd
+       state: installed
+   - name: apache service start
+     service: 
+       name: httpd
+       state: started
+       enabled: true
+   - name: enable firewall 
+     firewalld:
+       service: http
+       permanent: true
+       state: enabled
