@@ -1,0 +1,8 @@
+- name: copy the repo file on nodes 
+  hosts: 192.168.0.104
+  tasks: 
+    - name: to copy source to destination
+      copy:
+       src: /etc/yum.repos.d/dvd.repo
+       dest: /etc/yum.repos.d/dvd1.repo 
+       
