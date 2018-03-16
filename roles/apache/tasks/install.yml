@@ -1,0 +1,5 @@
+# installing httpd package 
+- name: install apache
+  yum:
+    name: httpd
+    state: installed
